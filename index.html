@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+p {
+    font-size: 1.2em;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Age to Days Converter</h1>
+        <form id="ageForm">
+            <label for="age">Enter your age (in years):</label>
+            <input type="number" id="age" name="age" required>
+            <button  type="submit">Convert into days</button>
+        </form>
+        <p class="result"></p>
+    </div>
+    <div class="container">
+        <h1>Hours to Minutes Converter</h1>
+        <form id="hourForm">
+            <label for="hour">Enter Hours:</label>
+            <input type="number" id="hours" name="hour" required>
+            <button  type="submit">Convert into minutes</button>
+        </form>
+        <p class="hour-result"></p>
+    </div>
+    <div class="container">
+        <h1>Finding next number</h1>
+            <label for="number">Enter Number:</label>
+            <input type="number" id="number" name="hour" required>
+        <p class="next-number"></p>
+        <button onclick="findNextNumber()">Find the next number</button>
+    </div>
+    <div class="container">
+        <h1>Enter name (lower case):</h1>
+            <label for="number">Enter Name:</label>
+            <input type="text" id="text" name="text" required>
+        <p class="displayName"></p>
+        <button onclick="displayCapName()">Display Name</button>
+    </div>
+    <div class="container">
+        <h1>Finding Bmi:</h1>
+            <label for="weight">Enter Weight:</label>
+            <input type="number" id="weight" name="weight" required>
+            <label for="height">Enter Weight:</label>
+            <input type="number" id="height" name="height" required>
+        <p class="displayBmiResult"></p>
+        <button onclick="displayBmi()">Display Bmi</button>
+    </div>
+    </div>
+    <div class="container">
+        <div class="input-box">
+            <label for="num1">Number 1:</label>
+            <input type="text" id="num1" oninput="updateResult()">
+        </div>
+        <div class="input-box">
+            <label for="num2">Number 2:</label>
+            <input type="text" id="num2" oninput="updateResult()">
+        </div>
+        <div class="input-box">
+            <label for="result">Result:</label>
+            <input type="text" id="result" readonly>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
