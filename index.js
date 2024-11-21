@@ -23,7 +23,7 @@ function findNextNumber(){
 // Creating function to display name in right order
 function displayCapName(){
     let name = document.getElementById("text").value;
-    let modifyName = name.charAt(0).toUpperCase() + name;
+    let modifyName = name.charAt(0).toUpperCase() + name.slice(1, );
     let p = document.querySelector(".displayName").innerHTML = modifyName;
 }
 
