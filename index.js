@@ -42,7 +42,7 @@ function displayCapName(){
     let name = document.getElementById("text").value;
     let firstName = name.split(" ")[0];
     let lastName = name.split(" ")[1];
-    console.log(firsName)
+    console.log(firstName)
     console.log(lastName)
     let modifyName = firstName.charAt(0).toUpperCase() + firstName.slice(1, ) + " " + lastName.charAt(0).toUpperCase() + lastName.slice(1,);
     
