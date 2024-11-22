@@ -19,23 +19,26 @@ document.getElementById("hourForm").addEventListener("submit", (event) => {
     }else{
         const minutes = hours * 60;
         let p =  document.querySelector(".hour-result").innerHTML = `there are ${minutes} minutes in ${hours} hours`;
-    }
+    
+}
   
    
 })
 // Creating function to find the next number based on the user input
-function findNextNumber(){
-    let number = document.getElementById("number").value;
-    if(number < 0){
-        let p = document.querySelector(".next-number").innerHTML = "Please enter a valid number";
-    } else{
-        let actualNumber = Number(number);
-        let secondNumber = actualNumber + 1;
-        let p = document.querySelector(".next-number").innerHTML = secondNumber;
+ function findNextNumber(){
+    const number = document.getElementById("number").value;
+    const array = number.split(",");
+    if(number < 0 || array < 0){
+      let p = document.querySelector('.next-number').innerHTML = "Please enter valid numbers";
+    }else{
+        let lastNumber = Number(array[array.length-1]);
+        lastNumber = lastNumber + 1;
+       
+        let p = document.querySelector(".next-number").innerHTML = lastNumber;
     }
    
-    
-}
+
+ }
 
 // Creating function to display name in right order
 function displayCapName(){
